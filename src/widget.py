@@ -21,3 +21,8 @@ def mask_account_card(str_number_card_or_account: str, number_account: list, num
 
 def get_date(str_date: str) -> str:
     """Принимает строку с датой и возвращает дату в формате "ДД.ММ.ГГГГ" """
+
+    str_date = list(str_date)
+    tru_date = str(f"'{str_date[9:11]}.{str_date[6:8]}.{str_date[1:5]}'")
+
+    return tru_date
