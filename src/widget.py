@@ -1,7 +1,7 @@
 from src.masks import get_mask_account, get_mask_card_number
 
 
-def mask_account_card(str_number_card_or_account: str, number_account: list, number_card: list) -> str:
+def mask_account_card(str_number_card_or_account: str) -> str:
     """Обрабатывает информацию о картах и о счетах"""
 
     if "Счет" in str_number_card_or_account or "счет" in str_number_card_or_account:  # используем маскировку счета
