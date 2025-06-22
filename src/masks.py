@@ -9,7 +9,7 @@ def get_mask_card_number(number_card: list) -> str:
     number_card = number_card[0]
 
     # Удаляем все нецифровые символы
-    number_card = ''.join(filter(str.isdigit, number_card))
+    number_card = "".join(filter(str.isdigit, number_card))
 
     if len(number_card) != 16:
         return "Некорректный номер карты"
@@ -30,7 +30,7 @@ def get_mask_account(number_account: list) -> str:
     number_account = number_account[0]
 
     # Удаляем все нецифровые символы
-    number_account = ''.join(filter(str.isdigit, number_account))
+    number_account = "".join(filter(str.isdigit, number_account))
 
     if len(number_account) != 20:
         return "Некорректный номер счета"
