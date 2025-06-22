@@ -8,8 +8,8 @@ def mask_account_card(str_number_card_or_account: str) -> str:
         number_account = list(str_number_card_or_account[-20:])
         number_account_mask = get_mask_account(number_account)
         word = str_number_card_or_account[:-21]
-        if number_account_mask == 'Некорректный номер счета':
-            text = 'Некорректный номер счета'
+        if number_account_mask == "Некорректный номер счета":
+            text = "Некорректный номер счета"
         else:
             text = str(f"{word.title()} {number_account_mask}")
 
@@ -17,8 +17,8 @@ def mask_account_card(str_number_card_or_account: str) -> str:
         number_card = list(str_number_card_or_account[-16:])
         number_card_mask = get_mask_card_number(number_card)
         word = str_number_card_or_account[:-17]
-        if number_card_mask == 'Некорректный номер карты':
-            text = 'Некорректный номер карты'
+        if number_card_mask == "Некорректный номер карты":
+            text = "Некорректный номер карты"
         else:
             text = str(f"{word.title()} {number_card_mask}")
 
@@ -28,8 +28,8 @@ def mask_account_card(str_number_card_or_account: str) -> str:
 def get_date(str_date: str) -> str:
     """Принимает строку с датой и возвращает дату в формате "ДД.ММ.ГГГГ" """
 
-    if str_date == '':
-        tru_date = 'Некорректная дата'
+    if str_date == "":
+        tru_date = "Некорректная дата"
     else:
         tru_date = str(f"{str_date[9:11]}.{str_date[6:8]}.{str_date[1:5]}")
 
