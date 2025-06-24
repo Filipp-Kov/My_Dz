@@ -11,4 +11,4 @@ def test_mask_account_card():
 
 def test_get_date():
     assert get_date("-1999-10-20rfsff") == "20.10.1999"
-    assert get_date("") == "Некорректная дата"
+    assert get_date("") == None

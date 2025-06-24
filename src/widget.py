@@ -29,8 +29,11 @@ def get_date(str_date: str) -> str:
     """Принимает строку с датой и возвращает дату в формате "ДД.ММ.ГГГГ" """
 
     if str_date == "":
-        tru_date = "Некорректная дата"
+        return None
     else:
-        tru_date = str(f"{str_date[9:11]}.{str_date[6:8]}.{str_date[1:5]}")
+        # Извлекаем год, месяц и день из строки
+        year = str_date[1:5]  # Год
+        month = str_date[6:8]  # Месяц
+        day = str_date[9:11]  # День
+        return f"{day}.{month}.{year}"
 
-    return tru_date

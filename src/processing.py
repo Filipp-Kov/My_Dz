@@ -1,5 +1,5 @@
 from typing import List, Dict, Any
-from widget import get_date
+from src.widget import get_date
 
 
 def filter_by_state(list_of_transactions: List[Dict[str, Any]], state="EXECUTED") -> List[Dict[str, Any]]:
@@ -16,7 +16,9 @@ def filter_by_state(list_of_transactions: List[Dict[str, Any]], state="EXECUTED"
 
 def sort_by_date(list_of_transactions: List[Dict[str, Any]], fun_sorted: bool = False) -> List[Dict[str, Any]]:
     """Функция принимает список словарей и сортирует их по дате. Параметр сортировки по умолчанию - убывание"""
+    # Фильтруем некорректные даты
+    filtered_transactions = [tx for tx in list_of_transactions if get_date(tx["date"]) is not None]
 
-    sorted_list = sorted(list_of_transactions, key=lambda x: get_date(x["date"]), reverse=not fun_sorted)
+    sorted_list = sorted(filtered_transactions, key=lambda x: get_date(x["date"]), reverse=not fun_sorted)
 
     return sorted_list
