@@ -36,4 +36,3 @@ def get_date(str_date: str) -> str:
         month = str_date[6:8]  # Месяц
         day = str_date[9:11]  # День
         return f"{day}.{month}.{year}"
-
