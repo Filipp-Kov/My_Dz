@@ -29,6 +29,7 @@ pip install -r requirements.txt
 В модуле masks (2/2) - get_mask_card_number, get_mask_account
 В модуле widget (2/2) - mask_account_card, get_date
 В модуле processing (2/2) - filter_by_state, sort_by_date
+В модуле generators (3/3) - filter_by_currency, transaction_descriptions, card_number_generator
 
 Чтобы проверить тесты:
 1) Откройте консоль
