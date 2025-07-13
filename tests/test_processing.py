@@ -57,7 +57,7 @@ def test_filter_by_state(transactions, state, expected):
             False,
             [{"id": 3, "date": "/1999-01-22"}, {"id": 2, "date": "/1999-01-21"}],
         ),
-    ]
+    ],
 )
 def test_sort_by_date(transactions, fun_sorted, expected):
     assert sort_by_date(transactions, fun_sorted) == expected

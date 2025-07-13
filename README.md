@@ -7,6 +7,9 @@
 - принимает номер счет и маскирует его
 - принимает номер карты и маскирует его
 - преобразует дату в классический вид
+- фильтрует транзакции по датам
+- генерирует номера банковских карт
+- записывает логи
 
 ## Установка:
 
@@ -30,6 +33,7 @@ pip install -r requirements.txt
 В модуле widget (2/2) - mask_account_card, get_date
 В модуле processing (2/2) - filter_by_state, sort_by_date
 В модуле generators (3/3) - filter_by_currency, transaction_descriptions, card_number_generator
+В модуле decorators - log
 
 Чтобы проверить тесты:
 1) Откройте консоль
