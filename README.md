@@ -29,11 +29,13 @@ pip install -r requirements.txt
 
 ## Тестирование:
 Протестированы функции:
-В модуле masks (2/2) - get_mask_card_number, get_mask_account
-В модуле widget (2/2) - mask_account_card, get_date
-В модуле processing (2/2) - filter_by_state, sort_by_date
-В модуле generators (3/3) - filter_by_currency, transaction_descriptions, card_number_generator
-В модуле decorators - log
+1) В модуле masks (2/2) - get_mask_card_number, get_mask_account
+2) В модуле widget (2/2) - mask_account_card, get_date
+3) В модуле processing (2/2) - filter_by_state, sort_by_date
+4) В модуле generators (3/3) - filter_by_currency, transaction_descriptions, card_number_generator
+5) В модуле decorators - log
+6) В модуле utils - load_transactions
+7) В модуле external_api - convert_transaction_amount 
 
 Чтобы проверить тесты:
 1) Откройте консоль
