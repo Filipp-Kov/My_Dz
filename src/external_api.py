@@ -2,7 +2,7 @@ import requests
 
 
 def convert_transaction_amount(transaction: dict) -> float:
-    """ Конвертирует сумму транзакции в рубли используя API конвертации валют. """
+    """Конвертирует сумму транзакции в рубли используя API конвертации валют."""
     try:
         # Проверка обязательных полей
         if "amount" not in transaction or "currency" not in transaction:
@@ -27,13 +27,9 @@ def convert_transaction_amount(transaction: dict) -> float:
         # Запрос к API конвертации
         response = requests.get(
             f"https://api.apilayer.com/exchangerates_data/convert",
-            params={
-                "to": "RUB",
-                "from": currency,
-                "amount": amount
-            },
+            params={"to": "RUB", "from": currency, "amount": amount},
             headers={"apikey": "API_KEY"},
-            timeout=10
+            timeout=10,
         )
 
         # Проверка ответа
